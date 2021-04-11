@@ -50,7 +50,15 @@ export default class calculadora extends Component {
     this.btn = this.btn.bind(this);
   }
 
-  btn(b) {}
+  btn(b) {
+    let s = this.state;
+    if (b == "C") {
+      s.result = "0";
+    } else if (b == "=") {
+      s.result = eval(s.result);
+    }
+    this.setState(s);
+  }
 
   render() {
     return (
