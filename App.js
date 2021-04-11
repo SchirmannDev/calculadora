@@ -29,7 +29,7 @@ class Botao extends Component {
   render() {
     return (
       <TouchableOpacity style={this.styles.area}>
-        <Text style={this.styles.text}></Text>
+        <Text style={this.styles.text}>{this.props.n}</Text>
       </TouchableOpacity>
     );
   }
@@ -44,36 +44,35 @@ export default class calculadora extends Component {
         </View>
 
         <View style={styles.lines}>
-          <Botao c="3" />
-          <Botao />
+          <Botao c="3" n="C" />
+          <Botao n="/" />
         </View>
 
         <View style={styles.lines}>
-          <Botao />
-          <Botao />
-          <Botao />
-          <Botao />
+          <Botao n="7" />
+          <Botao n="8" />
+          <Botao n="9" />
+          <Botao n="*" />
         </View>
 
         <View style={styles.lines}>
-          <Botao />
-          <Botao />
-          <Botao />
-          <Botao />
+          <Botao n="4" />
+          <Botao n="5" />
+          <Botao n="6" />
+          <Botao n="-" />
         </View>
 
         <View style={styles.lines}>
-          <Botao />
-          <Botao />
-          <Botao />
-          <Botao />
+          <Botao n="1" />
+          <Botao n="2" />
+          <Botao n="3" />
+          <Botao n="+" />
         </View>
 
         <View style={styles.lines}>
-          <Botao />
-          <Botao />
-          <Botao />
-          <Botao />
+          <Botao c="2" n="0" />
+          <Botao n="." />
+          <Botao n="=" />
         </View>
       </View>
     );
