@@ -18,7 +18,7 @@ class Botao extends Component {
         alignItems: "center",
         borderWidth: 1,
         borderColor: "#999999",
-        backgroundColor: "#E0E",
+        backgroundColor: "#E0E0E0",
       },
       text: {
         fontSize: 18,
@@ -39,9 +39,29 @@ export default class calculadora extends Component {
   render() {
     return (
       <View style={styles.body}>
-        <Botao c="2" />
-        <Botao />
-        <Botao />
+        <View style={styles.lines}>
+          <Botao c="2" />
+          <Botao />
+          <Botao />
+        </View>
+
+        <View style={styles.lines}>
+          <Botao c="2" />
+          <Botao />
+          <Botao />
+        </View>
+
+        <View style={styles.lines}>
+          <Botao c="2" />
+          <Botao />
+          <Botao />
+        </View>
+
+        <View style={styles.lines}>
+          <Botao c="2" />
+          <Botao />
+          <Botao />
+        </View>
       </View>
     );
   }
@@ -50,5 +70,9 @@ export default class calculadora extends Component {
 const styles = StyleSheet.create({
   body: {
     paddingTop: 20,
+    flex: 1,
+  },
+  lines: {
+    flex: 1,
   },
 });
