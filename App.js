@@ -4,11 +4,16 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 class Botao extends Component {
   constructor(props) {
     super(props);
-    this.props = {};
+    this.state = {};
 
     let c = 1;
     if (props.c) {
       c = parseInt(props.c);
+    }
+
+    let bg = "#E0E0E0";
+    if (props.bg) {
+      bg = "";
     }
 
     this.styles = StyleSheet.create({
