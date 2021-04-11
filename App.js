@@ -35,7 +35,7 @@ class Botao extends Component {
 
   render() {
     return (
-      <TouchableOpacity style={this.styles.area}>
+      <TouchableOpacity style={this.styles.area} onPress={this.props.onPress}>
         <Text style={this.styles.text}>{this.props.n}</Text>
       </TouchableOpacity>
     );
@@ -43,43 +43,144 @@ class Botao extends Component {
 }
 
 export default class calculadora extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { result: "0" };
+
+    this.btn = this.btn.bind(this);
+  }
+
+  btn(b) {}
+
   render() {
     return (
       <View style={styles.body}>
         <View style={styles.lines}>
-          <Text></Text>
+          <Text style={styles.res}>{this.state.result} </Text>
         </View>
 
         <View style={styles.lines}>
-          <Botao c="3" n="C" />
-          <Botao n="/" bg="#FD9526" />
+          <Botao
+            c="3"
+            n="C"
+            onPress={() => {
+              this.btn("C");
+            }}
+          />
+          <Botao
+            n="/"
+            bg="#FD9526"
+            onPress={() => {
+              this.btn("/");
+            }}
+          />
         </View>
 
         <View style={styles.lines}>
-          <Botao n="7" />
-          <Botao n="8" />
-          <Botao n="9" />
-          <Botao n="*" bg="#FD9526" />
+          <Botao
+            n="7"
+            onPress={() => {
+              this.btn("7");
+            }}
+          />
+          <Botao
+            n="8"
+            onPress={() => {
+              this.btn("8");
+            }}
+          />
+          <Botao
+            n="9"
+            onPress={() => {
+              this.btn("9");
+            }}
+          />
+          <Botao
+            n="*"
+            bg="#FD9526"
+            onPress={() => {
+              this.btn("*");
+            }}
+          />
         </View>
 
         <View style={styles.lines}>
-          <Botao n="4" />
-          <Botao n="5" />
-          <Botao n="6" />
-          <Botao n="-" bg="#FD9526" />
+          <Botao
+            n="4"
+            onPress={() => {
+              this.btn("4");
+            }}
+          />
+          <Botao
+            n="5"
+            onPress={() => {
+              this.btn("5");
+            }}
+          />
+          <Botao
+            n="6"
+            onPress={() => {
+              this.btn("6");
+            }}
+          />
+          <Botao
+            n="-"
+            bg="#FD9526"
+            onPress={() => {
+              this.btn("-");
+            }}
+          />
         </View>
 
         <View style={styles.lines}>
-          <Botao n="1" />
-          <Botao n="2" />
-          <Botao n="3" />
-          <Botao n="+" bg="#FD9526" />
+          <Botao
+            n="1"
+            onPress={() => {
+              this.btn("1");
+            }}
+          />
+          <Botao
+            n="2"
+            onPress={() => {
+              this.btn("2");
+            }}
+          />
+          <Botao
+            n="3"
+            onPress={() => {
+              this.btn("3");
+            }}
+          />
+          <Botao
+            n="+"
+            bg="#FD9526"
+            onPress={() => {
+              this.btn("+");
+            }}
+          />
         </View>
 
         <View style={styles.lines}>
-          <Botao c="2" n="0" />
-          <Botao n="." />
-          <Botao n="=" bg="#FD9526" />
+          <Botao
+            c="2"
+            n="0"
+            onPress={() => {
+              this.btn("0");
+            }}
+          />
+          <Botao
+            n="."
+            onPress={() => {
+              this.btn(".");
+            }}
+          />
+          <Botao
+            n="="
+            bg="#FD9526"
+            onPress={() => {
+              this.btn("=");
+            }}
+          />
         </View>
       </View>
     );
@@ -94,5 +195,12 @@ const styles = StyleSheet.create({
   lines: {
     flex: 1,
     flexDirection: "row",
+  },
+  res: {
+    backgroundColor: "#000000",
+    fontSize: 55,
+    color: "#ffffff",
+    flex: 1,
+    textAlign: "right",
   },
 });
