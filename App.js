@@ -40,25 +40,38 @@ export default class calculadora extends Component {
     return (
       <View style={styles.body}>
         <View style={styles.lines}>
-          <Botao c="2" />
+          <Text></Text>
+        </View>
+
+        <View style={styles.lines}>
+          <Botao c="3" />
+          <Botao />
+        </View>
+
+        <View style={styles.lines}>
+          <Botao />
+          <Botao />
           <Botao />
           <Botao />
         </View>
 
         <View style={styles.lines}>
-          <Botao c="2" />
+          <Botao />
+          <Botao />
           <Botao />
           <Botao />
         </View>
 
         <View style={styles.lines}>
-          <Botao c="2" />
+          <Botao />
+          <Botao />
           <Botao />
           <Botao />
         </View>
 
         <View style={styles.lines}>
-          <Botao c="2" />
+          <Botao />
+          <Botao />
           <Botao />
           <Botao />
         </View>
@@ -74,5 +87,6 @@ const styles = StyleSheet.create({
   },
   lines: {
     flex: 1,
+    flexDirection: "row",
   },
 });
