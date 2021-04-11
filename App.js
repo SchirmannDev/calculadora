@@ -56,6 +56,12 @@ export default class calculadora extends Component {
       s.result = "0";
     } else if (b == "=") {
       s.result = eval(s.result);
+    } else {
+      if (s.result == "0") {
+        s.result = b;
+      } else {
+        s.result += b;
+      }
     }
     this.setState(s);
   }
