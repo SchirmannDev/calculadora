@@ -22,11 +22,13 @@ class Botao extends Component {
         justifyContent: "center",
         alignItems: "center",
         borderWidth: 1,
-        borderColor: "#999999",
-        backgroundColor: "#E0E0E0",
+        borderColor: "#1a1b20",
+        backgroundColor: bg,
       },
       text: {
-        fontSize: 18,
+        fontSize: 40,
+        color: "#ffff",
+        fontWeight: "bold",
       },
     });
   }
