@@ -6,14 +6,22 @@ class Botao extends Component {
     super(props);
     this.props = {};
 
+    let c = 1;
+    if (props.c) {
+      c = parseInt(props.c);
+    }
+
     this.styles = StyleSheet.create({
       area: {
-        flex: 1,
+        flex: c,
         justifyContent: "center",
         alignItems: "center",
         borderWidth: 1,
         borderColor: "#999999",
         backgroundColor: "#E0E",
+      },
+      text: {
+        fontSize: 18,
       },
     });
   }
@@ -21,7 +29,7 @@ class Botao extends Component {
   render() {
     return (
       <TouchableOpacity style={this.styles.area}>
-        <Text></Text>
+        <Text style={this.styles.text}></Text>
       </TouchableOpacity>
     );
   }
@@ -31,7 +39,9 @@ export default class calculadora extends Component {
   render() {
     return (
       <View style={styles.body}>
-        <Text>Hello World Bitches</Text>
+        <Botao c="2" />
+        <Botao />
+        <Botao />
       </View>
     );
   }
