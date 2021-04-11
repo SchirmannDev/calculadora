@@ -13,7 +13,7 @@ class Botao extends Component {
 
     let bg = "#E0E0E0";
     if (props.bg) {
-      bg = "";
+      bg = props.bg;
     }
 
     this.styles = StyleSheet.create({
@@ -50,34 +50,34 @@ export default class calculadora extends Component {
 
         <View style={styles.lines}>
           <Botao c="3" n="C" />
-          <Botao n="/" />
+          <Botao n="/" bg="#FD9526" />
         </View>
 
         <View style={styles.lines}>
           <Botao n="7" />
           <Botao n="8" />
           <Botao n="9" />
-          <Botao n="*" />
+          <Botao n="*" bg="#FD9526" />
         </View>
 
         <View style={styles.lines}>
           <Botao n="4" />
           <Botao n="5" />
           <Botao n="6" />
-          <Botao n="-" />
+          <Botao n="-" bg="#FD9526" />
         </View>
 
         <View style={styles.lines}>
           <Botao n="1" />
           <Botao n="2" />
           <Botao n="3" />
-          <Botao n="+" />
+          <Botao n="+" bg="#FD9526" />
         </View>
 
         <View style={styles.lines}>
           <Botao c="2" n="0" />
           <Botao n="." />
-          <Botao n="=" />
+          <Botao n="=" bg="#FD9526" />
         </View>
       </View>
     );
